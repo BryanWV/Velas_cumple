@@ -20,11 +20,11 @@ public class Velas_cumple {
         // TODO code application logic here
         byte x=0,contador=0; //variables para digitar el numero de cumpleaños y para sumar las velas mas altas
     Scanner leer= new Scanner(System.in);
-    System.out.println("Digite cuantos años tiene el cumpleañero");
+    System.out.println("Digite cuantos años tiene el/la cumpleañero/a");
     byte años=leer.nextByte();//variable tipo byte para no consumir mucha memoria
     byte altura_velas[]=new byte[años];
         System.out.println("Digite las alturas de las velas");
-        for (int i=0;i<años;i++)//ciclo para digitar las alturas de las velas en el vector altura_velas
+        for (int i=0;i<años;i++)//ciclo for para digitar las alturas de las velas en el vector altura_velas
         {
             altura_velas[i]=leer.nextByte();
             if (altura_velas[i]>x)//condicional para almacenar la altura de la vela mas grande
@@ -33,9 +33,10 @@ public class Velas_cumple {
               
             }
         }
-            for (int i=0;i<años;i++)
+            for (int i=0;i<años;i++)/*ciclo for para que, despues de obtener la altura mas grande,
+                se comienze a sumar la cantidad de velas de la misma magnitud*/
         {
-            if (altura_velas[i]==x)
+            if (altura_velas[i]==x)//condicional para sumar la cantidad de las velas
             {
                 contador++;
             }
